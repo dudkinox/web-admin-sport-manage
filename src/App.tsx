@@ -1,7 +1,4 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
 
 function App() {
   return (
@@ -96,11 +93,8 @@ function App() {
                 </div>
               </div>
             </li>
-            {/* Divider */}
             <hr className="sidebar-divider" />
-            {/* Heading */}
             <div className="sidebar-heading">Addons</div>
-            {/* Nav Item - Pages Collapse Menu */}
             <li className="nav-item">
               <a
                 className="nav-link collapsed"
@@ -180,21 +174,15 @@ function App() {
               </a>
             </div>
           </ul>
-          {/* End of Sidebar */}
-          {/* Content Wrapper */}
           <div id="content-wrapper" className="d-flex flex-column">
-            {/* Main Content */}
             <div id="content">
-              {/* Topbar */}
               <nav className="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-                {/* Sidebar Toggle (Topbar) */}
                 <button
                   id="sidebarToggleTop"
                   className="btn btn-link d-md-none rounded-circle mr-3"
                 >
                   <i className="fa fa-bars" />
                 </button>
-                {/* Topbar Search */}
                 <form className="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                   <div className="input-group">
                     <input
@@ -211,9 +199,7 @@ function App() {
                     </div>
                   </div>
                 </form>
-                {/* Topbar Navbar */}
                 <ul className="navbar-nav ml-auto">
-                  {/* Nav Item - Search Dropdown (Visible Only XS) */}
                   <li className="nav-item dropdown no-arrow d-sm-none">
                     <a
                       className="nav-link dropdown-toggle"
@@ -226,7 +212,6 @@ function App() {
                     >
                       <i className="fas fa-search fa-fw" />
                     </a>
-                    {/* Dropdown - Messages */}
                     <div
                       className="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
                       aria-labelledby="searchDropdown"
