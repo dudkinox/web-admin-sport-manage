@@ -67,3 +67,10 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+.MuiPaper-root.MuiDrawer-paper,
+.MuiSnackbar-root {
+  background-color: #4e73df;
+}
+.css-10hburv-MuiTypography-root {
+  color: #ffffff;
+}
