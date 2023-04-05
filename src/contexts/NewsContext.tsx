@@ -2,6 +2,7 @@ import { createContext, ReactNode, useEffect, useMemo, useState } from "react";
 import GetNewsResponse from "../models/Response/GetNewsResponse";
 import NewsRequest from "../models/Request/NewsRequest";
 import NewsServices from "../services/newsServices";
+import initEditor from "../common/EditorCommon";
 
 interface NewsContextProps {
   topic: string;
@@ -73,6 +74,7 @@ export function NewsContextProvider({ children }: ChildrenProps) {
     NewsServices.GetNews()
       .then((res: any) => {
         setNews(res.data);
+        setTimeout(() => initEditor(), 100);
       })
       .catch((err: any) => {
         console.log(err);

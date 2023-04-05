@@ -8,7 +8,7 @@ export default function TextEditor() {
       </div>
       <div className="card-body">
         <textarea
-          id="summernote"
+          id="summerNote"
           defaultValue={
             "      Place <em>some</em> <u>text</u> <strong>here</strong>\n    "
           }

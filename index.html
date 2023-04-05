@@ -1,59 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>web admin</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/sb-admin-2.min.css" />
+    <link rel="stylesheet" href="/css/adminlte.min.css?v=3.2.0" />
+    <link rel="stylesheet" href="/plugins/summernote/summernote-bs4.min.css" />
+    <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <title>web admin</title>
-  <link
-    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-    rel="stylesheet">
-  <link href="/css/sb-admin-2.min.css" rel="stylesheet">
-  <!-- <link rel="stylesheet" href="/dist/css/adminlte.min.css?v=3.2.0"> -->
-  <link rel="stylesheet" href="/plugins/summernote/summernote-bs4.min.css">
-  <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css">
-  <link rel="stylesheet" href="/dist/css/adminlte.min.css?v=3.2.0">
-</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-<body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.tsx"></script>
-  <script src="/vendor/jquery/jquery.min.js"></script>
-  <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
 
-  <!-- Core plugin JavaScript-->
-  <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="/js/sb-admin-2.min.js"></script>
 
-  <!-- Custom scripts for all pages-->
-  <script src="/js/sb-admin-2.min.js"></script>
+    <script src="/vendor/chart.js/Chart.min.js"></script>
 
-  <!-- Page level plugins -->
-  <script src="/vendor/chart.js/Chart.min.js"></script>
-
-  <!-- Page level custom scripts -->
-  <script src="/js/demo/chart-area-demo.js"></script>
-  <script src="/js/demo/chart-pie-demo.js"></script>
-<script src="/plugins/jquery/jquery.min.js"></script>
-<script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="/dist/js/adminlte.min.js?v=3.2.0"></script>
-<script src="/plugins/summernote/summernote-bs4.min.js"></script>
-<script>
-  $(function () {
-    // Summernote
-    $('#summernote').summernote()
-
-    // CodeMirror
-    CodeMirror.fromTextArea(document.getElementById("codeMirrorDemo"), {
-      mode: "htmlmixed",
-      theme: "monokai"
-    });
-  })
-</script>
-</body>
-
+    <script src="/js/demo/chart-area-demo.js"></script>
+    <script src="/js/demo/chart-pie-demo.js"></script>
+    <script src="/plugins/jquery/jquery.min.js"></script>
+    <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/adminlte.min.js?v=3.2.0"></script>
+    <script src="/plugins/summernote/summernote-bs4.min.js"></script>
+    <script>
+      //$(document).ready(function () {
+        //$("#summerNote").summernote();
+     // });
+    </script>
+  </body>
 </html>
