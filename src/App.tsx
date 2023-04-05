@@ -1,10 +1,11 @@
-import * as React from "react";
+import React, { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import MenuIcon from "@mui/icons-material/Menu";
 import EmojiEmotionsIcon from "@mui/icons-material/EmojiEmotions";
-// import { styled } from "@mui/material/styles";
+
+import { styled } from "@mui/material/styles";
 import {
   Link,
   Typography,
@@ -21,6 +22,7 @@ import {
   Box,
   Grid,
 } from "@mui/material";
+import MyComponent from "./component/Addimg";
 
 const drawerWidth = 240;
 
@@ -35,6 +37,11 @@ export default function ResponsiveDrawer(props: Props) {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
+
+  const Image = styled("img")({
+    maxWidth: "100%",
+  });
+
   const styles = {
     divider: {
       marginLeft: 10,
@@ -198,7 +205,9 @@ export default function ResponsiveDrawer(props: Props) {
           width: { sm: `calc(100% - ${drawerWidth}px)` },
         }}
       >
+        <MyComponent />
         <Toolbar />
+
         <Typography paragraph>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Rhoncus
