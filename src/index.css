@@ -1,4 +1,4 @@
-:root {
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -74,8 +74,8 @@ button:focus-visible {
 .css-10hburv-MuiTypography-root {
   color: #ffffff;
 }
-.css-o4b71y-MuiAccordionSummary-content  {
-  margin: 0 !important; 
+.css-o4b71y-MuiAccordionSummary-content {
+  margin: 0 !important;
 }
 
 .divider {
@@ -96,13 +96,14 @@ button:focus-visible {
 }
 .listItemIcon {
   color: "white";
-
 }
-.css-15v22id-MuiAccordionDetails-root{
+.css-15v22id-MuiAccordionDetails-root {
   padding: 0 !important;
 }
-
-.cardDashboard{
+.css-46bh2p-MuiCardContent-root:last-child {
+  padding-bottom: 0 !important;
+}
+.cardDashboard {
   background-color: #4e73df;
   color: white;
   border-radius: 20px;
@@ -110,3 +111,10 @@ button:focus-visible {
   margin-right: 10px;
   height: 100%;
 }
+.textButtonPopup {
+  font-size: 12px;
+  font-weight: 400;
+  color: black;
+  border-radius: 20px;
+  padding: 0px;
+} */

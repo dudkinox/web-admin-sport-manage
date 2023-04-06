@@ -2,6 +2,7 @@ import React from "react";
 
 export default function TextEditor() {
   return (
+
     <div className="card card-outline card-info">
       <div className="card-header">
         <h3 className="card-title">Summernote</h3>

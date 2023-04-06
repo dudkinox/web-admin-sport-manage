@@ -1,4 +1,6 @@
-export enum PathEnum {
-    DASHBOARD = "/",
-    POPUP = "/popup",
-  }
+export const PathEnum = [
+  {
+    topic: "จัดการหน้าข่าว Popup",
+    path: "/",
+  },
+];

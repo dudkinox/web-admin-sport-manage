@@ -1,12 +1,13 @@
 import { lazy } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { NewsContextProvider } from "./contexts/NewsContext";
 
 const Dashboard = lazy(() => import("./pages/Dashboard"));
 
 export default function App() {
+  // "/" <= popup
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
         <Route
           path="/"
@@ -17,6 +18,6 @@ export default function App() {
           }
         />
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
