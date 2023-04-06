@@ -32,11 +32,11 @@ export default function ResponsiveDrawer() {
                 />
               </div>
               <div className="card-footer">
-                Visit <a href="">Summernote</a> documentation for more examples
-                and information about the plugin.
+                <button type="button" className="btn btn-primary">
+                  บันทึก
+                </button>
               </div>
             </div>
-            {/* summernote */}
           </div>
         </div>
       </div>
