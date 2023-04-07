@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { PathEnum } from "../../enum/path.enum";
 import MenuBar from "../../components/menu";
 import HeaderPage from "../../components/headerPage";
@@ -7,8 +7,24 @@ import initEditor from "../../common/EditorCommon";
 import GetNewsResponse from "../../models/Response/GetNewsResponse";
 
 export default function ResponsiveDrawer() {
-  const [topic, setTopic] = useState("กำลังโหลด...");
+  const [topic, setTopic] = useState<string>("กำลังโหลด...");
+  const [topicInput, setTopicInput] = useState<string>("");
   const [newsList, setNewsList] = useState<GetNewsResponse[]>([]);
+
+  const handlerSubmit = (e: any) => {
+    e.preventDefault();
+    const detail = document.querySelector("#summerNote");
+    NewsServices.addNewsService("popup", {
+      topic: topicInput,
+      detail: (detail as any).value,
+    })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   useEffect(() => {
     setTimeout(() => initEditor(), 100);
@@ -37,17 +53,26 @@ export default function ResponsiveDrawer() {
                 <h3 className="card-title">{topic}</h3>
               </div>
               <div className="card-body">
-                <textarea
-                  id="summerNote"
-                  defaultValue={
-                    "      Place <em>some</em> <u>text</u> <strong>here</strong>\n    "
-                  }
-                />
-              </div>
-              <div className="card-footer text-center">
-                <button type="button" className="btn btn-primary col-3">
-                  บันทึก
-                </button>
+                <form onSubmit={handlerSubmit}>
+                  <div className="form-group">
+                    <label>topic</label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Enter ..."
+                      onChange={(e) => setTopicInput(e.target.value)}
+                    />
+                  </div>
+                  <textarea id="summerNote" />
+                  <div className="text-center">
+                    <button
+                      type="submit"
+                      className="btn btn-primary col-3 mr-3 mb-3 align-self-center "
+                    >
+                      บันทึก
+                    </button>
+                  </div>
+                </form>
               </div>
             </div>
             <div className="card shadow mb-4">
@@ -80,7 +105,13 @@ export default function ResponsiveDrawer() {
                             <td>{index + 1}</td>
                             <td>{item.createdAt}</td>
                             <td>{item.topic}</td>
-                            <td>{item.detail}</td>
+                            <td>
+                              <div
+                                dangerouslySetInnerHTML={{
+                                  __html: item.detail,
+                                }}
+                              ></div>
+                            </td>
                             <td>
                               <div className="row text-center">
                                 <div className="col-6">

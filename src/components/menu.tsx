@@ -18,7 +18,7 @@ export default function MenuBar() {
       {/* Divider */}
       <hr className="sidebar-divider my-0" />
       <hr className="sidebar-divider" />
-      <div className="sidebar-heading">Interface</div>
+      <div className="sidebar-heading">Interface</div>{" "}
       <li className="nav-item">
         <a
           className="nav-link collapsed"
